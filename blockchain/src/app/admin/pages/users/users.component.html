@@ -1,0 +1,39 @@
+
+<div class=" content">
+  <div class=" row">
+    <div class=" col-md-12">
+      <div class=" card">
+        <div class=" card-header">
+          <h4 class=" card-title">User's</h4>
+        </div>
+        <div class=" card-body">
+          <div class=" table-responsive">
+            <table class=" table tablesorter" id="">
+              <thead class=" text-primary">
+                <tr>
+                  <th>UserId</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Password</th>
+                  <th>Ip Address</th>
+                  <th>Created Date</th>
+                </tr>
+              </thead>
+              <tbody >
+                <tr *ngFor="let allusers of alluser.data; index as i">
+                  <td>{{allusers.id}}</td>
+                  <td>{{allusers.name}}</td>
+                  <td>{{allusers.email}}</td>
+                  <td>{{allusers.password}}</td>
+                  <td>{{allusers.ip}}</td>
+                  <td>{{allusers.createdAt}}</td>
+                  </tr>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

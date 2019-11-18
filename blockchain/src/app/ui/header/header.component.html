@@ -1,0 +1,36 @@
+      <!--==========================
+         Header
+         ============================-->
+
+      <header id="header">
+         <div class="" style="max-width: 100%;width: 100%;position: fixed;height: 75px;padding-left: 22px;padding-right: 16px;background: white;z-index: 10000;opacity: 100;">
+            <div id="logo" class="pull-left">
+               <h1><a routerLink="/" class="scrollto" style="font-weight: 700">Knowledge Society</a></h1>
+               <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+            </div>
+            <nav id="nav-menu-container">
+               <ul class="nav-menu">
+                  <li  ><a routerLink="/">Home</a></li>
+                  <li  ><a routerLink="/about-us">About Us</a></li>
+                  <li  ><a>Partners</a></li>
+                  <li ><a routerLink="/portfolio">News & Events</a></li>
+                  <li ><a routerLink="/contact-us">Contact Us</a></li>
+                  <li ><a  >Platform</a></li>
+                  <li *ngIf="!isLogIn" ><a routerLink="/sign-in" >Sign In</a><a routerLink="/sign-up">Sign Up</a></li>
+                  <!-- <li><a routerLink="services">Services</a></li> -->
+                  <!-- <li><a routerLink="portfolio">Portfolio</a></li> -->
+                  <li class="menu-has-children" *ngIf="isLogIn" >
+                     <a style="text-transform: capitalize;">{{currentUser}}</a>
+                     <ul>
+                        <li><a>My Profile</a></li>
+                        <li><a routerLink="/subscription">Subscription</a></li>
+                        <li><a routerLink="/subscription">Subscription</a></li>
+                        <li><a (click)="onLogout()" >Logout</a></li>
+                     </ul>
+                  </li>
+               </ul>
+            </nav>
+            <!-- #nav-menu-container -->
+         </div>
+      </header>
+      <!-- #header -->
